@@ -1,0 +1,16 @@
+# Byte‑compiled / cache
+__pycache__/
+*.py[cod]
+
+# Packages / build
+*.egg-info/
+dist/
+build/
+
+# Coverage
+.coverage
+htmlcov/
+
+# Misc
+.venv
+
