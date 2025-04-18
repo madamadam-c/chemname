@@ -20,4 +20,4 @@ jobs:
           pip install .[test] pytest coverage
       - name: Run tests with coverage
         run: |
-          pytest --cov=chemname --cov-report=term --cov-fail-under=70 -q
+          pytest --cov=chemname --cov-report=term --cov-fail-under=80 -q
