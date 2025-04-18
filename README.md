@@ -9,3 +9,10 @@ naming engine.  Future versions will add naming logic incrementally.
 python -m pip install -e .
 pytest -q
 
+## Changelog
+
+### v0.2.0 — Straight‑chain naming
+- Add naming of straight‑chain alkanes, alkenes, alkynes, and haloalkanes  
+- Enforce lowest‑set locants and drop redundant “1‑” for monosubstituted methane/ethane and ethene  
+- 50 golden regression tests locked in `tests/golden`  
+- Performance guard: ≤ 0.5 s naming 1 000 random C₁₂ molecules  

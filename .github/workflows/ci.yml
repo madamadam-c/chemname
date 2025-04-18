@@ -21,4 +21,3 @@ jobs:
       - name: Run tests with coverage
         run: |
           pytest --cov=chemname --cov-report=term --cov-fail-under=70 -q
-

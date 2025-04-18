@@ -1,14 +1,14 @@
-"""chemname – zero‑dependency IUPAC helper library (core graph model)."""
+"""chemname – zero‑dependency IUPAC helper library."""
 
 from importlib.metadata import version as _v
 
-# Public API re‑exports
-from .core.structures import Atom, Bond, Molecule
 from .core.exceptions import (
     DuplicateAtomError,
     DuplicateBondError,
     UnknownAtomError,
 )
+from .core.structures import Atom, Bond, Molecule
+from .naming.namer import name  # v0.2.0 public entry point
 
 __all__ = [
     "Atom",
@@ -17,13 +17,12 @@ __all__ = [
     "DuplicateAtomError",
     "DuplicateBondError",
     "UnknownAtomError",
+    "name",
 ]
 
-__version__: str = "0.1.0"
+__version__ = "0.2.0"
 
-# Ensure package metadata is available even when installed editable
 try:  # pragma: no cover
-    __pkg_version = _v(__name__)  # noqa: SLF001
+    __pkg_version = _v(__name__)
 except Exception:  # noqa: BLE001
     __pkg_version = __version__
-
